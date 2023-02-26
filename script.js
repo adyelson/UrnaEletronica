@@ -118,9 +118,14 @@ function confirma(){
             comecarEtapa();
         }else{
             document.querySelector('.tela').innerHTML = `<div class="aviso--gigante pisca">FIM</div>`;
+           tocarSom();
             console.log(votos);
         }
     }
 }
 
 comecarEtapa();
+function tocarSom() {
+    const som = new Audio('confirma-urna.mp3');
+    som.play();
+  }
